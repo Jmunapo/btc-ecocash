@@ -1,0 +1,51 @@
+<ion-content>
+  <!--  -->
+  <ion-list  *ngIf="open === 'home'">
+    <button ion-item (click)="closeWith('anything')">
+      <i class="fa fa-sign-out"></i>
+      Send Money
+    </button>
+    <button ion-item>
+      <i class="fa fa-info-circle"></i>
+      About
+    </button>
+  </ion-list>
+
+  <!--  -->
+  <ion-list  *ngIf="open === 'markets'">
+    <button ion-item (click)="closeWith('services')">
+      <i class="fa fa-sign-out"></i>
+      Volume
+    </button>
+    <button ion-item>
+      <i class="fa fa-info-circle"></i>
+      About
+    </button>
+  </ion-list>
+
+  <!--  -->
+  <ion-list  *ngIf="open === 'wallets'">
+    <button ion-item (click)="closeWith('options')">
+      <i class="fa fa-sign-out"></i>
+      Wallets
+    </button>
+    <button ion-item>
+      <i class="fa fa-info-circle"></i>
+      About
+    </button>
+  </ion-list>
+
+  <!--  -->
+  <ion-list  *ngIf="open === 'exchange'">
+    <button ion-item (click)="closeWith('test')">
+      <i class="fa fa-sign-out"></i>
+      Send Money
+    </button>
+    <button ion-item>
+      <i class="fa fa-info-circle"></i>
+      About
+    </button>
+  </ion-list>
+
+</ion-content>
+

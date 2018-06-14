@@ -1,0 +1,7 @@
+<ion-tabs tabsHideOnSubPages="true" selectedIndex="2" #mainTabs>
+  <ion-tab [root]="homeRoot" tabTitle="Home" tabIcon="home" (ionSelect)="select('tab-t0-0')"></ion-tab>
+  <ion-tab [root]="marketsRoot" tabTitle="Markets" tabIcon="stats" (ionSelect)="select('tab-t0-1')"></ion-tab>
+  <ion-tab [root]="walletsRoot" tabTitle="Wallets" tabIcon="card" (ionSelect)="select('tab-t0-2')"></ion-tab>
+  <ion-tab [root]="exchangeRoot" tabTitle="Exchange" tabIcon="swap" (ionSelect)="select('tab-t0-3')"></ion-tab>
+  <ion-tab tabIcon="fa-ellipsis-v" (ionSelect)="more()"></ion-tab>
+</ion-tabs>

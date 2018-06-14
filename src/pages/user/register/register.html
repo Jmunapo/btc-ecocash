@@ -1,0 +1,67 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Register</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="dark">
+        <i class="fa fa-history fa-fw fa-2x"></i>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-item no-lines padding>
+        <ion-label [class.invalid-info]="valid.email" stacked>Email
+          <ion-note id="regEmail" [hidden]="!valid.email" float-right class="invalid-info">Enter valid email</ion-note>
+        </ion-label>
+        <ion-input 
+          (focus)="valid.email = false" 
+          [class.not-valid]="valid.email" type="email" 
+          [(ngModel)]="register.email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item no-lines padding>
+        <ion-label stacked>Referral Code (optional)</ion-label>
+        <ion-input type="text" [(ngModel)]="register.referral"></ion-input>
+      </ion-item>
+
+      <ion-item no-lines padding>
+        <ion-label [class.invalid-info]="valid.password" stacked>Password 
+          <ion-note id="regPass" [hidden]="!valid.password" float-right class="invalid-info">Enter strong password</ion-note>
+        </ion-label>
+        <ion-input
+          clearOnEdit="false"
+          id="pwd-field"
+          (focus)="valid.password = false" 
+          [class.not-valid]="valid.password" [type]="dom.type"
+          [(ngModel)]="register.password">
+        </ion-input>
+        <button color="divider" ion-button icon-only clear class="see-pwd" type="button" item-right (click)="view()">
+          <ion-icon [name]="dom.icon"></ion-icon>
+        </button>
+      </ion-item>
+
+      <div padding text-center>
+        <button class="deposit-btn" ion-button color="divider" outline (click)="doRegister()">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          &nbsp;
+          Register
+        </button>
+        <br>
+        <p color="light tm" style="font-size: x-small">
+          BY CLICKING REGISTER, YOU HAVE READ AND AGREE TO THE BTC-SKRILL'S <span class="link">TERMS & CONDITIONS</span>
+        </p>
+      </div>
+    </ion-card-content>
+    <div class="footer" padding text-center>
+      <p color="light">Already have an account? <span class="link" (click)="toLogin()">Login</span></p>
+    </div>
+
+  </ion-card>
+</ion-content>

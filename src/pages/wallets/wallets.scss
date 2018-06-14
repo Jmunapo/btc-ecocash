@@ -1,0 +1,14 @@
+page-wallets {
+    .action {
+      border-radius: unset;
+    }
+
+    .fab {
+      width: 100px;
+      height: 40px;
+      font-family: 'system';
+      font-size: small;
+      border: .5px solid color($colors, divider);
+      border-top: unset;
+    }
+}

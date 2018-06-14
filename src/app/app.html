@@ -1,0 +1,70 @@
+<ion-menu [content]="content">
+  <ion-content class="side-menu-gradient">
+  <div class="profile" no-padding>
+    <div class="profile-image" text-center>
+      <img src="assets/imgs/logo.png" alt="" width="140">
+    </div>
+    <div class="profile-info" padding>
+      <h6>jmags40@gmail.com</h6>
+      <p>Estimated Value(USD): $15</p> 
+      <h5>Ref-ID: 1234555</h5>
+    </div>
+    
+  </div>
+  <div class="actions" padding>
+    <ion-list no-lines>
+      <button ion-item class="side-menu-item" (click)="open('money')">
+        <span class="item-content">
+          <i class="fa fa-sign-out"></i>
+          Send Money
+        </span>
+      </button>
+      <button ion-item class="side-menu-item" (click)="open('about')">
+        <span class="item-content">
+          <i class="fa fa-info-circle"></i>
+          About
+        </span>
+      </button>
+
+      <button ion-item class="side-menu-item" (click)="open('setting', $event)">
+        <span class="item-content">
+          <i class="fa fa-cog"></i>
+          Setting
+          </span>
+      </button>
+    </ion-list>
+  </div>
+  
+
+
+  </ion-content>
+
+  <ion-footer>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div text-center>
+            <span (click)="openSettings()" menuClose>
+            <i class="fa fa-gear fa-2x faLight" aria-hidden="true"></i>
+          </span>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <span (click)="openPage('HelpAboutPage')" menuClose>
+              <i class="fa fa-question-circle-o fa-2x faLight" aria-hidden="true"></i>
+            </span>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div text-right>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-footer>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

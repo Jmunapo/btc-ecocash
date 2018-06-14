@@ -1,0 +1,18 @@
+<button *ngIf="show" small class="instructions" ion-item no-padding no-lines (click)="toggleAccordion()">
+  <p item-left padding-left>Instructions</p>
+  <i [class]="'fa faLight '+icon" item-right></i>
+</button>
+
+<ion-card #instruc class="expand-instruc" no-padding>
+  <ion-card-content>
+    <p class="instruc-content" *ngFor="let i of instructions">
+      * {{i}}
+    </p>
+  </ion-card-content>
+  <ion-item>
+    <button color="info" ion-button icon-left outline item-end (click)="gotIt()">
+      <ion-icon color="info" name="close"></ion-icon>
+      Got It
+    </button>
+  </ion-item>
+</ion-card>

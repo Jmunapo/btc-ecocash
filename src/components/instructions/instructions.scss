@@ -1,0 +1,17 @@
+instructions {
+    .expand-instruc{
+      padding: 0px 16px;
+      max-height: 0px;
+    }
+    p{
+      color: color($colors, light) !important;
+    }
+    button.instructions {
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.507) !important;
+      height: 29.5px !important;
+    }
+    .item-inner{
+      min-height: unset;
+      height: 29.5px;
+    }
+}

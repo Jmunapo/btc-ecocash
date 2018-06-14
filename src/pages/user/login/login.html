@@ -1,0 +1,32 @@
+<ion-content>
+  <button ion-button icon-only large clear color="light"  class="action" (click)="open('Home')">
+     <ion-icon ios="ios-close" md="md-close"></ion-icon>
+  </button>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-item no-lines padding>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item no-lines padding>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+      <div padding text-center>
+        <button class="deposit-btn" ion-button color="divider" outline (click)="login()">
+          <i class="fa fa-sign-in a-rotate-100" aria-hidden="true"></i>
+          &nbsp;
+          Login
+        </button>
+      </div>
+    </ion-card-content>
+    <div class="footer" padding text-center>
+      <p class="link" (click)="open('Forgot')">Forgot your password?</p>
+      <p color="light">Don't have an account yet? <span class="link" (click)="open('Register')">Register</span></p>
+    </div>
+
+  </ion-card>
+
+</ion-content>

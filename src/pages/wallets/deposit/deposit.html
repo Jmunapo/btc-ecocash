@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar text-center>
+    <ion-title>Deposit</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="history()">
+        <i class="fa fa-history fa-fw fa-2x"></i>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-refresher (ionRefresh)="showInstruc = true; $event.complete()">
+  </ion-refresher>
+  <instructions [instructions]="instructions" [show-instructions]="showInstruc"></instructions>
+
+  
+    <ion-item no-lines padding>
+      <ion-label stacked>Approval Code</ion-label>
+      <ion-input text-uppercase type="text"></ion-input>
+    </ion-item>
+    <ion-item no-lines padding>
+      <ion-label stacked>Amount</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    
+    <div padding text-center>
+      <button class="deposit-btn" ion-button color="divider" (click)="presentLoadingCustom()" outline>
+        <i class="fa fa-sign-in a-rotate-90" aria-hidden="true"></i>
+        Deposit
+      </button>
+    </div>
+
+
+
+</ion-content>

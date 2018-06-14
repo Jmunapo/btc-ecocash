@@ -1,0 +1,30 @@
+page-deposit {
+    .item-input ion-input,
+    .item-input ion-textarea{
+        border: .5px solid color($colors, divider);
+        padding: 0 5px;
+        color: color($colors, light);
+        caret-color: color($colors, divider);
+    }
+    .item-input .label-md{
+        color: color($colors, divider);
+        font-family: 'system' !important;
+        font-size: 1.4rem;
+        padding-bottom: 2px;
+    }
+    .deposit-btn{
+        border-radius: unset;
+    }
+    .item-input-has-focus .label-md[stacked],
+    .input-has-focus .label-md[stacked],
+    .item-input-has-focus .label-md[floating],
+    .input-has-focus .label-md[floating] {
+      color: color($colors, divider);
+    }
+    /*.scroll-content{
+        margin-top: 16px !important;
+    }*/
+    button {
+        font-family: 'system' !important;
+    }
+}

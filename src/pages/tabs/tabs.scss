@@ -1,0 +1,74 @@
+page-tabs {
+    // Hacks for font awesome icons in tabbar
+    // see https://forum.ionicframework.com/t/anyway-to-custom-the-tabbars-icon-with-my-own-svg-file/46131/2
+    // the content code of each fa-icon can be found here: 'node_modules/font-awesome/css/font-awesome.css'
+    .fa-icons-general {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    }
+
+    .ion-ios-fa-home::before,
+    .ion-ios-fa-home-outline::before,
+    .ion-md-fa-home::before {
+    @extend .fa-icons-general;
+    content: "\f015";
+    }
+
+    .ion-ios-fa-ellipsis-v::before,
+    .ion-ios-fa-ellipsis-v-outline::before,
+    .ion-md-fa-ellipsis-v::before {
+    @extend .fa-icons-general;
+    content: "\f142";
+    }
+
+    .ion-ios-fa-exchange::before,
+    .ion-ios-fa-exchange-outline::before,
+    .ion-md-fa-exchange::before {
+    @extend .fa-icons-general;
+    content: "\f0ec";
+    }
+
+    .ion-ios-fa-bar-chart::before,
+    .ion-ios-fa-bar-chart-outline::before,
+    .ion-md-fa-bar-chart::before {
+    @extend .fa-icons-general;
+    content: "\f080";
+    }
+
+    .ion-ios-fa-credit-card-alt::before,
+    .ion-ios-fa-credit-card-alt-outline::before,
+    .ion-md-fa-credit-card-alt::before {
+    @extend .fa-icons-general;
+    content: "\f283";
+    }
+
+    .ion-ios-fa-list-alt::before,
+    .ion-ios-fa-list-alt-outline::before,
+    .ion-md-fa-list-alt::before {
+    @extend .fa-icons-general;
+    content: "\f022";
+    }
+
+    #tab-t0-4 {
+    max-width: 30px;
+    padding: 18px;
+    }
+
+    .tab-button-text {
+    opacity: 1;
+    max-height: 999px;
+    transition: opacity 1s, max-height 0s;
+    }
+
+    .hide-text {
+    opacity: 0.01;
+    max-height: 0px;
+    transition: opacity 1s, max-height 0s 1s;
+    }
+
+}

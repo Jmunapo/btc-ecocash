@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Wallets</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <button ion-item *ngFor="let wallet of wallets">
+      <h3>{{wallet.name}} Wallet</h3>
+      <p>
+        ${{wallet.amount}}
+      </p>
+    </button>
+  </ion-list>
+
+  <ion-fab bottom left>
+    <button ion-fab class="action" (click)="selectWallet('Deposit')">
+      <i class="fa fa-long-arrow-down fa-2x fa-fw" aria-hidden="true"></i> Deposit
+    </button>
+  </ion-fab>
+
+  <ion-fab bottom right>
+    <button ion-fab class="action" (click)="selectWallet('Withdraw')">
+      <i class="fa fa-long-arrow-up fa-2x fa-fw" aria-hidden="true"></i> Withdraw
+    </button>
+  </ion-fab>
+</ion-content>
